@@ -1,0 +1,6 @@
+SELECT  
+  COUNT (DISTINCT warehouse.state) AS num_states
+FROM 
+  warehouse_orders.orders AS Orders
+JOIN 
+  warehouse_orders.warehouse AS warehouse ON orders.warehouse_id = warehouse.warehouse_id
