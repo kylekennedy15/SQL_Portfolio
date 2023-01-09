@@ -7,7 +7,6 @@ WITH trips_over_1_hr AS (
 )
 
 ## Count how many trips are 60+ minutes long
-
 SELECT
   COUNT(*) AS cnt
 FROM
