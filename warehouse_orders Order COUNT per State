@@ -1,0 +1,9 @@
+SELECT  
+  warehouse.state as state,
+  COUNT (DISTINCT order_id) AS num_orders
+FROM 
+  warehouse_orders.orders AS Orders
+JOIN 
+  warehouse_orders.warehouse AS warehouse ON orders.warehouse_id = warehouse.warehouse_id
+GROUP BY 
+  warehouse.state
